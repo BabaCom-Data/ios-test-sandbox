@@ -6,7 +6,7 @@ workflows:
         XCODE_WORKSPACE: "App.xcodeproj"
         XCODE_SCHEME: "App"
       xcode: latest
-      cocoapods: default  # This gets overridden in scripts below
+      ruby: 3.1.4  # ✅ Downgrade from Ruby 3.3.6 to avoid CocoaPods path errors
 
     scripts:
       - name: Downgrade CocoaPods to 1.15.2
@@ -14,13 +14,17 @@ workflows:
           gem uninstall cocoapods --all --executables
           gem install cocoapods -v 1.15.2
 
-      - name: Install CocoaPods dependencies
+      - name: Install dependencies with pod install
         script: |
           pod install --verbose
 
-      - name: Build iOS App (Optional)
+      - name: Optional build step
         script: |
-          xcodebuild -project "$XCODE_WORKSPACE" -scheme "$XCODE_SCHEME" -configuration Release CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+          xcodebuild -project "$XCODE_WORKSPACE" \
+                     -scheme "$XCODE_SCHEME" \
+                     -configuration Release \
+                     CODE_SIGN_IDENTITY="" \
+                     CODE_SIGNING_REQUIRED=NO
 
     artifacts:
       - build/**/*
