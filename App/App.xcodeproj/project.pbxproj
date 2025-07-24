@@ -5,8 +5,7 @@
   objectVersion = 55;
   objects = {
 
-    // Project
-    A1PROJECT001 = {
+    A1PROJ001 = {
       isa = PBXProject;
       buildConfigurationList = A1CONFIGLIST001;
       compatibilityVersion = "Xcode 16.0";
@@ -18,24 +17,21 @@
       );
     };
 
-    // Main Group
     A1GROUP001 = {
       isa = PBXGroup;
       children = (
-        A1SOURCE001,
+        A1FILE001,
       );
       sourceTree = "<group>";
     };
 
-    // Source File
-    A1SOURCE001 = {
+    A1FILE001 = {
       isa = PBXFileReference;
       lastKnownFileType = sourcecode.swift;
       path = AppDelegate.swift;
       sourceTree = "<group>";
     };
 
-    // Product Reference
     A1PRODUCT001 = {
       isa = PBXFileReference;
       path = App.app;
@@ -43,14 +39,13 @@
       explicitFileType = wrapper.application;
     };
 
-    // Native Target
     A1TARGET001 = {
       isa = PBXNativeTarget;
       name = App;
       buildConfigurationList = A1CONFIGLIST001;
       productName = App;
-      productType = "com.apple.product-type.application";
       productReference = A1PRODUCT001;
+      productType = "com.apple.product-type.application";
       buildPhases = (
         A1PHASESRC001,
         A1PHASERES001,
@@ -60,21 +55,21 @@
       dependencies = ();
     };
 
-    // Build Phases
     A1PHASESRC001 = {
       isa = PBXSourcesBuildPhase;
       files = ();
     };
+
     A1PHASERES001 = {
       isa = PBXResourcesBuildPhase;
       files = ();
     };
+
     A1PHASEFWK001 = {
       isa = PBXFrameworksBuildPhase;
       files = ();
     };
 
-    // Build Configuration List
     A1CONFIGLIST001 = {
       isa = XCConfigurationList;
       buildConfigurations = (
@@ -83,7 +78,6 @@
       );
     };
 
-    // Debug Configuration
     A1CONFIGDEBUG001 = {
       isa = XCBuildConfiguration;
       name = Debug;
@@ -97,7 +91,6 @@
       };
     };
 
-    // Release Configuration
     A1CONFIGRELEASE001 = {
       isa = XCBuildConfiguration;
       name = Release;
@@ -113,5 +106,5 @@
       };
     };
   };
-  rootObject = A1PROJECT001;
+  rootObject = A1PROJ001;
 }
