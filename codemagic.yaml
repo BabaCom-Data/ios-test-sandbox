@@ -1,0 +1,12 @@
+workflows:
+  pod-install-test:
+    name: Pod Install Test
+    environment:
+      vars:
+        XCODE_WORKSPACE: App.xcodeproj
+        XCODE_SCHEME: App
+    scripts:
+      - name: Install CocoaPods
+        script: |
+          cd ios-test
+          pod install --verbose
