@@ -1,11 +1,26 @@
 workflows:
-  pod-install-test:
-    name: Pod Install Test
+  ios-cocoapods-test:
+    name: iOS CocoaPods Sandbox
     environment:
       vars:
-        XCODE_WORKSPACE: App.xcodeproj
-        XCODE_SCHEME: App
+        XCODE_WORKSPACE: "App.xcodeproj"
+        XCODE_SCHEME: "App"
+      xcode: latest
+      cocoapods: default  # This gets overridden in scripts below
+
     scripts:
-      - name: Install CocoaPods
+      - name: Downgrade CocoaPods to 1.15.2
+        script: |
+          gem uninstall cocoapods --all --executables
+          gem install cocoapods -v 1.15.2
+
+      - name: Install CocoaPods dependencies
         script: |
           pod install --verbose
+
+      - name: Build iOS App (Optional)
+        script: |
+          xcodebuild -project "$XCODE_WORKSPACE" -scheme "$XCODE_SCHEME" -configuration Release CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+
+    artifacts:
+      - build/**/*
