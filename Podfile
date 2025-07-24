@@ -2,7 +2,7 @@ platform :ios, '14.0'
 use_frameworks!
 project 'App/App.xcodeproj'
 
-require_relative '../../node_modules/@capacitor/ios/scripts/pods_helpers'
+
 
 install! 'cocoapods', :disable_input_output_paths => true
 
