@@ -6,17 +6,12 @@ workflows:
         XCODE_WORKSPACE: "App.xcodeproj"
         XCODE_SCHEME: "App"
       xcode: latest
-      ruby: 3.1.4  # ✅ Downgrade from Ruby 3.3.6 to avoid CocoaPods path errors
 
     scripts:
-      - name: Downgrade CocoaPods to 1.15.2
+      - name: Use Bundler to install CocoaPods
         script: |
-          gem uninstall cocoapods --all --executables
-          gem install cocoapods -v 1.15.2
-
-      - name: Install dependencies with pod install
-        script: |
-          pod install --verbose
+          bundle install
+          bundle exec pod install --verbose
 
       - name: Optional build step
         script: |
