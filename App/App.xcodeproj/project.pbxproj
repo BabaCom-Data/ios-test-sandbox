@@ -88,6 +88,8 @@
         SWIFT_VERSION = 5.0;
         CODE_SIGN_STYLE = Automatic;
         DEVELOPMENT_TEAM = JR6427KL7J;
+        BUILD_DIR = build;
+        CONFIGURATION_BUILD_DIR = build/$(CONFIGURATION);
       };
     };
 
@@ -103,6 +105,8 @@
         CODE_SIGN_IDENTITY = "Apple Distribution";
         PROVISIONING_PROFILE_SPECIFIER = babacom-ios-profile;
         DEVELOPMENT_TEAM = JR6427KL7J;
+        BUILD_DIR = build;
+        CONFIGURATION_BUILD_DIR = build/$(CONFIGURATION);
       };
     };
   };
