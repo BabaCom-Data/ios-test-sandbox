@@ -76,6 +76,8 @@
         A1CONFIGDEBUG001,
         A1CONFIGRELEASE001,
       );
+      defaultConfigurationIsVisible = 0;
+      defaultConfigurationName = Release;
     };
 
     A1CONFIGDEBUG001 = {
