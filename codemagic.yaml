@@ -8,5 +8,4 @@ workflows:
     scripts:
       - name: Install CocoaPods
         script: |
-          cd ios-test
           pod install --verbose
