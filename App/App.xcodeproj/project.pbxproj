@@ -5,98 +5,107 @@
   objectVersion = 55;
   objects = {
 
-    A0000001 = {
+    // Project
+    A1PROJECT001 = {
       isa = PBXProject;
-      buildConfigurationList = A0000010;
+      buildConfigurationList = A1CONFIGLIST001;
       compatibilityVersion = "Xcode 16.0";
       developmentRegion = en;
       hasScannedForEncodings = 0;
-      mainGroup = A0000002;
+      mainGroup = A1GROUP001;
       targets = (
-        A0000020,
+        A1TARGET001,
       );
     };
 
-    A0000002 = {
+    // Main Group
+    A1GROUP001 = {
       isa = PBXGroup;
       children = (
-        A0000030,
+        A1SOURCE001,
       );
       sourceTree = "<group>";
     };
 
-    A0000030 = {
+    // Source File
+    A1SOURCE001 = {
       isa = PBXFileReference;
       lastKnownFileType = sourcecode.swift;
       path = AppDelegate.swift;
       sourceTree = "<group>";
     };
 
-    A0000040 = {
+    // Product Reference
+    A1PRODUCT001 = {
       isa = PBXFileReference;
       path = App.app;
       sourceTree = BUILT_PRODUCTS_DIR;
       explicitFileType = wrapper.application;
     };
 
-    A0000020 = {
+    // Native Target
+    A1TARGET001 = {
       isa = PBXNativeTarget;
       name = App;
-      buildConfigurationList = A0000010;
+      buildConfigurationList = A1CONFIGLIST001;
       productName = App;
       productType = "com.apple.product-type.application";
-      productReference = A0000040;
+      productReference = A1PRODUCT001;
       buildPhases = (
-        A0000050,
-        A0000051,
-        A0000052,
+        A1PHASESRC001,
+        A1PHASERES001,
+        A1PHASEFWK001,
       );
       buildRules = ();
       dependencies = ();
     };
 
-    A0000050 = {
+    // Build Phases
+    A1PHASESRC001 = {
       isa = PBXSourcesBuildPhase;
       files = ();
     };
-    A0000051 = {
+    A1PHASERES001 = {
       isa = PBXResourcesBuildPhase;
       files = ();
     };
-    A0000052 = {
+    A1PHASEFWK001 = {
       isa = PBXFrameworksBuildPhase;
       files = ();
     };
 
-    A0000010 = {
+    // Build Configuration List
+    A1CONFIGLIST001 = {
       isa = XCConfigurationList;
       buildConfigurations = (
-        A0000060,
-        A0000061,
+        A1CONFIGDEBUG001,
+        A1CONFIGRELEASE001,
       );
     };
 
-    A0000060 = {
+    // Debug Configuration
+    A1CONFIGDEBUG001 = {
       isa = XCBuildConfiguration;
       name = Debug;
       buildSettings = {
-        IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-        SWIFT_VERSION = 5.0;
         PRODUCT_NAME = "$(TARGET_NAME)";
         PRODUCT_BUNDLE_IDENTIFIER = com.babacomdata.app;
+        IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+        SWIFT_VERSION = 5.0;
         CODE_SIGN_STYLE = Automatic;
         DEVELOPMENT_TEAM = JR6427KL7J;
       };
     };
 
-    A0000061 = {
+    // Release Configuration
+    A1CONFIGRELEASE001 = {
       isa = XCBuildConfiguration;
       name = Release;
       buildSettings = {
-        IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-        SWIFT_VERSION = 5.0;
         PRODUCT_NAME = "$(TARGET_NAME)";
         PRODUCT_BUNDLE_IDENTIFIER = com.babacomdata.app;
+        IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+        SWIFT_VERSION = 5.0;
         CODE_SIGN_STYLE = Automatic;
         CODE_SIGN_IDENTITY = "Apple Distribution";
         PROVISIONING_PROFILE_SPECIFIER = babacom-ios-profile;
@@ -104,5 +113,5 @@
       };
     };
   };
-  rootObject = A0000001;
+  rootObject = A1PROJECT001;
 }
