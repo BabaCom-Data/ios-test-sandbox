@@ -89,7 +89,7 @@
         CODE_SIGN_STYLE = Automatic;
         DEVELOPMENT_TEAM = JR6427KL7J;
         BUILD_DIR = build;
-        CONFIGURATION_BUILD_DIR = build/$(CONFIGURATION);
+        CONFIGURATION_BUILD_DIR = "build/$(CONFIGURATION)";
       };
     };
 
@@ -106,7 +106,7 @@
         PROVISIONING_PROFILE_SPECIFIER = babacom-ios-profile;
         DEVELOPMENT_TEAM = JR6427KL7J;
         BUILD_DIR = build;
-        CONFIGURATION_BUILD_DIR = build/$(CONFIGURATION);
+        CONFIGURATION_BUILD_DIR = "build/$(CONFIGURATION)";
       };
     };
   };
