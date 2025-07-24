@@ -5,120 +5,104 @@
   objectVersion = 55;
   objects = {
 
-    // Project object
-    A1B2C3D4001 = {
+    A0000001 = {
       isa = PBXProject;
-      attributes = {
-        LastUpgradeCheck = 1600;
-        ORGANIZATIONNAME = "Babacom";
-      };
-      buildConfigurationList = A1B2C3D4005;
+      buildConfigurationList = A0000010;
       compatibilityVersion = "Xcode 16.0";
       developmentRegion = en;
       hasScannedForEncodings = 0;
-      mainGroup = A1B2C3D4002;
+      mainGroup = A0000002;
       targets = (
-        A1B2C3D4010,
+        A0000020,
       );
     };
 
-    // Main group
-    A1B2C3D4002 = {
+    A0000002 = {
       isa = PBXGroup;
       children = (
-        A1B2C3D4020,
+        A0000030,
       );
       sourceTree = "<group>";
     };
 
-    // File reference (dummy source)
-    A1B2C3D4020 = {
+    A0000030 = {
       isa = PBXFileReference;
       lastKnownFileType = sourcecode.swift;
       path = AppDelegate.swift;
       sourceTree = "<group>";
     };
 
-    // Product reference
-    A1B2C3D4050 = {
+    A0000040 = {
       isa = PBXFileReference;
       path = App.app;
       sourceTree = BUILT_PRODUCTS_DIR;
       explicitFileType = wrapper.application;
     };
 
-    // App target
-    A1B2C3D4010 = {
+    A0000020 = {
       isa = PBXNativeTarget;
       name = App;
-      path = App.xcodeproj;
-      buildConfigurationList = A1B2C3D4005;
-      productType = "com.apple.product-type.application";
+      buildConfigurationList = A0000010;
       productName = App;
+      productType = "com.apple.product-type.application";
+      productReference = A0000040;
       buildPhases = (
-        A1B2C3D4100,
-        A1B2C3D4101,
-        A1B2C3D4102,
+        A0000050,
+        A0000051,
+        A0000052,
       );
       buildRules = ();
       dependencies = ();
-      productReference = A1B2C3D4050;
     };
 
-    // Build phases
-    A1B2C3D4100 = {
+    A0000050 = {
       isa = PBXSourcesBuildPhase;
       files = ();
     };
-
-    A1B2C3D4101 = {
+    A0000051 = {
       isa = PBXResourcesBuildPhase;
       files = ();
     };
-
-    A1B2C3D4102 = {
+    A0000052 = {
       isa = PBXFrameworksBuildPhase;
       files = ();
     };
 
-    // Build configuration list
-    A1B2C3D4005 = {
+    A0000010 = {
       isa = XCConfigurationList;
       buildConfigurations = (
-        A1B2C3D4300,
-        A1B2C3D4301,
+        A0000060,
+        A0000061,
       );
     };
 
-    // Debug configuration
-    A1B2C3D4300 = {
+    A0000060 = {
       isa = XCBuildConfiguration;
       name = Debug;
       buildSettings = {
-        DEVELOPMENT_TEAM = JR6427KL7J;
+        IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+        SWIFT_VERSION = 5.0;
         PRODUCT_NAME = "$(TARGET_NAME)";
         PRODUCT_BUNDLE_IDENTIFIER = com.babacomdata.app;
         CODE_SIGN_STYLE = Automatic;
-        SWIFT_VERSION = 5.0;
-        IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+        DEVELOPMENT_TEAM = JR6427KL7J;
       };
     };
 
-    // Release configuration
-    A1B2C3D4301 = {
+    A0000061 = {
       isa = XCBuildConfiguration;
       name = Release;
       buildSettings = {
-        DEVELOPMENT_TEAM = JR6427KL7J;
+        IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+        SWIFT_VERSION = 5.0;
         PRODUCT_NAME = "$(TARGET_NAME)";
         PRODUCT_BUNDLE_IDENTIFIER = com.babacomdata.app;
         CODE_SIGN_STYLE = Automatic;
         CODE_SIGN_IDENTITY = "Apple Distribution";
         PROVISIONING_PROFILE_SPECIFIER = babacom-ios-profile;
-        SWIFT_VERSION = 5.0;
-        IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+        DEVELOPMENT_TEAM = JR6427KL7J;
       };
     };
   };
-  rootObject = A1B2C3D4001;
+  rootObject = A0000001;
 }
