@@ -23,8 +23,8 @@ end
 post_install do |installer|
   assertDeploymentTarget(installer)
 
-  # Optional fix: ensure build dir is set
   installer.pods_project.build_configurations.each do |config|
     config.build_settings['BUILD_DIR'] ||= 'build'
+    config.build_settings['CONFIGURATION_BUILD_DIR'] ||= 'build/$(CONFIGURATION)'
   end
 end
